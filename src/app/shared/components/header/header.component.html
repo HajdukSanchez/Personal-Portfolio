@@ -1,6 +1,6 @@
 <header>
   <figure class="logo-container">
-    <a href=""><img src="./../../../../assets/images/Logo.png" alt="Personal logo"></a>
+    <a [routerLink]="['/home']"><img src="./../../../../assets/images/Logo.png" alt="Personal logo"></a>
   </figure>
   <div class="menu-container">
     <button (click)="toogleMenu()" class="btn">
@@ -8,10 +8,10 @@
     </button>
     <nav [ngClass]="{ active: openMenu }" class="menu">
       <ul [ngClass]="{ active: openMenu }" class="menu__list">
-        <li class="menu__item"><a href="/" class="menu__link">Proyects</a></li>
-        <li class="menu__item"><a href="/" class="menu__link">Technologies</a></li>
-        <li class="menu__item"><a href="/" class="menu__link">About me</a></li>
-        <li class="menu__item"><a href="/" class="menu__link">Contact</a></li>
+        <li class="menu__item"><a [routerLink]="['/']" routerLinkActive="router-link-active" class="menu__link">Proyects</a></li>
+        <li class="menu__item"><a [routerLink]="['/']" routerLinkActive="router-link-active" class="menu__link">Technologies</a></li>
+        <li class="menu__item"><a [routerLink]="['/']" routerLinkActive="router-link-active" class="menu__link">About me</a></li>
+        <li class="menu__item"><a [routerLink]="['/']" routerLinkActive="router-link-active" class="menu__link">Contact</a></li>
         <li class="menu__item">
           <button class="btn btn__download">Download CV</button>
         </li>

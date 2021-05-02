@@ -1,19 +1,19 @@
 header {
-  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
   padding: 0.5rem;
-  position: relative;
 }
 
 .logo-container {
-  width: 3rem;
-  height: 3rem;
-
-  img {
-    width: 100%;
-  }
+  width: 1rem;
+  margin-left: 1rem;
+  z-index: 10;
 }
 
 .menu-container {
@@ -141,6 +141,7 @@ header {
   height: 100vh;
   background-color: rgb(128, 112, 112);
   opacity: 0;
+  z-index: 10;
   transition: 0.5s;
   -webkit-transition: 0.5s;
   -moz-transition: 0.5s;

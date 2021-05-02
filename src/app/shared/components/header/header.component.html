@@ -1,1 +1,8 @@
-<p>header works!</p>
+<header>
+  <figure class="logo-container">
+    <img src="" alt="Personal logo">
+  </figure>
+  <div class="menu-container">
+    <button [ngClass]="{ active: openMenu }" (click)="toogleMenu()" class="btn"><span [ngClass]="{ active: openMenu }" class="btn__hamburger"></span></button>
+  </div>
+</header>

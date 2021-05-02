@@ -33,6 +33,12 @@ header {
   cursor: pointer;
   z-index: 100;
 
+  &:hover {
+    .btn__hamburger::before {
+      width: 70%;
+    }
+  }
+
   .btn__hamburger {
     width: 2.5rem;
     height: 0.25rem;

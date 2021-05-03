@@ -18,17 +18,17 @@
   </div>
   <div class="info__container">
     <address class="info info__mail">
-      <a href="mailto:hajduksanchez.dev@gmail.com" target="_blank">hajduksanchez.dev@gmail.com</a>
+      <a href="mailto:{{mail}}" target="_blank">{{mail}}</a>
       <div>
         <fa-icon [icon]="faMail"></fa-icon>
       </div>
     </address>
     <address class="info info__location">
-      Bogotá D.C, Colombia
+      {{city}}
       <div>
         <fa-icon [icon]="faLocation"></fa-icon>
       </div>
     </address>
-    <p class="info info__creator">© Hajduk Sánchez 🚀 2021 💻</p>
+    <p class="info info__creator">{{creatorInfo}}</p>
   </div>
 </footer>

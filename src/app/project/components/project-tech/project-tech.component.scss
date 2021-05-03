@@ -1,0 +1,63 @@
+// Technologies color map
+$techs: (
+  'html': #dd4b25,
+  'css': #254bdd,
+  'sass': #c76494,
+  'js': #efd81d,
+  'java': linear-gradient(to bottom right, #ff8f00, #44799b 55%),
+  'bootstrap': #533b78,
+  'stylus': #afcb0e,
+  'less': #13448c,
+  'python': linear-gradient(to bottom right, #356c9b 40%, #ffc700),
+  'pug': linear-gradient(to bottom right, #56332b 40%, #efcca3),
+);
+
+.html {
+  background: map-get($map: $techs, $key: 'html');
+  // box-shadow: 1px 2px 5px 0px map-get($map: $techs, $key: 'html');
+}
+.css {
+  background: map-get($map: $techs, $key: 'css');
+  // box-shadow: 1px 2px 5px 0px map-get($map: $techs, $key: 'css');
+}
+.sass {
+  background: map-get($map: $techs, $key: 'sass');
+  // box-shadow: 1px 2px 5px 0px map-get($map: $techs, $key: 'sass');
+}
+.js {
+  background: map-get($map: $techs, $key: 'js');
+  // box-shadow: 1px 2px 5px 0px map-get($map: $techs, $key: 'js');
+}
+.java {
+  background: map-get($map: $techs, $key: 'java');
+  // box-shadow: 1px 2px 5px 0px map-get($map: $techs, $key: 'java');
+}
+.bootstrap {
+  background: map-get($map: $techs, $key: 'bootstrap');
+  // box-shadow: 1px 2px 5px 0px map-get($map: $techs, $key: 'bootstrap');
+}
+.stylus {
+  background: map-get($map: $techs, $key: 'stylus');
+  // box-shadow: 1px 2px 5px 0px map-get($map: $techs, $key: 'stylus');
+}
+.less {
+  background: map-get($map: $techs, $key: 'less');
+  // box-shadow: 1px 2px 5px 0px map-get($map: $techs, $key: 'less');
+}
+.python {
+  background: map-get($map: $techs, $key: 'python');
+  // box-shadow: 1px 2px 5px 0px map-get($map: $techs, $key: 'python');
+}
+.pug {
+  background: map-get($map: $techs, $key: 'pug');
+  // box-shadow: 1px 2px 5px 0px map-get($map: $techs, $key: 'pug');
+}
+
+.tech {
+  padding: 0.2rem 0.7rem;
+  border-radius: 3rem;
+  margin-bottom: 0.5rem;
+  margin-right: 0.5rem;
+  color: white;
+  box-shadow: 0px 0px 4px 0px rgb(152, 152, 152);
+}

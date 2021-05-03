@@ -1,3 +1,9 @@
-.container {
-  padding: 3rem 1rem;
+.container--tb {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.container--lr {
+  padding-left: 1rem;
+  padding-right: 1rem;
 }

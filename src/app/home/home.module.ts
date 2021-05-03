@@ -8,6 +8,7 @@ import { RouterModule } from '@angular/router';
 import { WelcomeComponent } from './components/welcome/welcome.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { ProjectModule } from '../project/project.module';
+import { TechnologiesModule } from '../technologies/technologies.module';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { ProjectModule } from '../project/project.module';
     SwiperModule,
     RouterModule,
     FontAwesomeModule,
-    ProjectModule
+    ProjectModule,
+    TechnologiesModule
   ]
 })
 export class HomeModule { }

@@ -1,0 +1,33 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.image {
+  width: 10rem;
+  height: 10rem;
+  margin-top: 2rem;
+  border-radius: 50%;
+
+  img {
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.flags {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  width: 20%;
+  padding-top: 1rem;
+
+  .flag:first-child {
+    margin-right: 0.5rem;
+  }
+}

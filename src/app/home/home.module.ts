@@ -9,12 +9,14 @@ import { WelcomeComponent } from './components/welcome/welcome.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { ProjectModule } from '../project/project.module';
 import { TechnologiesModule } from '../technologies/technologies.module';
+import { PersonalInfoComponent } from './components/personal-info/personal-info.component';
 
 @NgModule({
   declarations: [
     HomeComponent,
     BannerComponent,
-    WelcomeComponent
+    WelcomeComponent,
+    PersonalInfoComponent
   ],
   imports: [
     CommonModule,

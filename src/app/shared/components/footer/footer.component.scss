@@ -1,3 +1,19 @@
+/* Variables */
+/*************************************/
+// Footer
+$bg-color: #252424;
+$color: #969696;
+// Socials icons
+$bg-color-hover: #000000a2;
+$color-hover: rgb(228, 228, 228);
+$color-hover-icon: white;
+// Mail a
+$color-effect: #edbb00;
+$color-icon-hover: #edbb00;
+// Transition
+$transition: 0.5s;
+/*************************************/
+
 footer {
   width: 100%;
   padding: 1rem;
@@ -5,7 +21,10 @@ footer {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: $bg-color;
+  color: $color;
 }
+
 .social {
   display: flex;
   width: 50%;
@@ -19,17 +38,17 @@ footer {
     padding: 0.5rem;
     border-radius: 50%;
     background-color: transparent;
-    transition: 0.5s;
-    -webkit-transition: 0.5s;
-    -moz-transition: 0.5s;
-    -ms-transition: 0.5s;
-    -o-transition: 0.5s;
+    transition: $transition;
+    -webkit-transition: $transition;
+    -moz-transition: $transition;
+    -ms-transition: $transition;
+    -o-transition: $transition;
 
     &:hover {
-      background-color: red;
+      background-color: $bg-color-hover;
 
       a {
-        color: white;
+        color: $color-hover;
       }
     }
   }
@@ -51,6 +70,12 @@ footer {
     }
 
     &__mail {
+      transition: $transition;
+      -webkit-transition: $transition;
+      -moz-transition: $transition;
+      -ms-transition: $transition;
+      -o-transition: $transition;
+
       a::after {
         content: '';
         display: block;
@@ -58,20 +83,34 @@ footer {
         left: 20%;
         width: 30%;
         height: 0.1rem;
-        background-color: red;
-        transition: 0.5s;
+        background-color: $color-effect;
         transform-origin: center;
-        -webkit-transition: 0.5s;
-        -moz-transition: 0.5s;
-        -ms-transition: 0.5s;
-        -o-transition: 0.5s;
+        transition: $transition;
+        -webkit-transition: $transition;
+        -moz-transition: $transition;
+        -ms-transition: $transition;
+        -o-transition: $transition;
       }
 
-      a:hover::after {
+      a:hover {
+        color: $color-hover;
+      }
+
+      a:hover:after {
         left: 0;
         width: 100%;
       }
+
+      a:hover + div {
+        color: $color-icon-hover;
+        transition: $transition;
+        -webkit-transition: $transition;
+        -moz-transition: $transition;
+        -ms-transition: $transition;
+        -o-transition: $transition;
+      }
     }
+
     &__creator {
       padding-bottom: 3rem;
     }

@@ -1,3 +1,11 @@
+/* Variables */
+/*************************************/
+// Technologie
+$bg-color: #0000001c;
+// Transition
+$transition: 0.5s;
+/*************************************/
+
 :host {
   width: 100%;
 }
@@ -25,15 +33,15 @@
   width: 50%;
   min-width: 40%;
   max-width: 80%;
-  background-color: #fdfdfd;
+  background-color: $bg-color;
   margin-top: 0.5rem;
   padding: 0.5rem;
   border-radius: 0.23rem;
-  transition: 0.5s;
-  -webkit-transition: 0.5s;
-  -moz-transition: 0.5s;
-  -ms-transition: 0.5s;
-  -o-transition: 0.5s;
+  transition: $transition;
+  -webkit-transition: $transition;
+  -moz-transition: $transition;
+  -ms-transition: $transition;
+  -o-transition: $transition;
 
   &:hover {
     .technologie__name {
@@ -59,10 +67,10 @@
     height: 0;
     padding: 0;
     opacity: 0;
-    transition: 0.5s;
-    -webkit-transition: 0.5s;
-    -moz-transition: 0.5s;
-    -ms-transition: 0.5s;
-    -o-transition: 0.5s;
+    transition: $transition;
+    -webkit-transition: $transition;
+    -moz-transition: $transition;
+    -ms-transition: $transition;
+    -o-transition: $transition;
   }
 }

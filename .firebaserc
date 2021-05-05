@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "jhs-portfolio": {
+      "hosting": {
+        "jhs-portfolio": [
+          "jhs-portfolio"
+        ]
+      }
+    }
+  }
+}

@@ -21,7 +21,7 @@ header {
   height: 2rem;
 }
 
-.btn {
+.hamburguer-menu {
   position: relative;
   display: flex;
   justify-content: center;
@@ -34,12 +34,12 @@ header {
   z-index: 100;
 
   &:hover {
-    .btn__hamburger::before {
+    span::before {
       width: 70%;
     }
   }
 
-  .btn__hamburger {
+  span {
     width: 2.5rem;
     height: 0.25rem;
     background: red;
@@ -107,27 +107,6 @@ header {
       -moz-transform: translatey(0.2rem);
       -ms-transform: translatey(0.2rem);
       -o-transform: translatey(0.2rem);
-    }
-  }
-
-  &__download {
-    padding: 0.5rem;
-    border-radius: 0.2rem;
-    border: 0.01rem solid black;
-    transition: 0.5s;
-    -webkit-transition: 0.5s;
-    -moz-transition: 0.5s;
-    -ms-transition: 0.5s;
-    -o-transition: 0.5s;
-    -webkit-border-radius: 0.2rem;
-    -moz-border-radius: 0.2rem;
-    -ms-border-radius: 0.2rem;
-    -o-border-radius: 0.2rem;
-
-    &:hover {
-      color: white;
-      background-color: gray;
-      border-color: white;
     }
   }
 }

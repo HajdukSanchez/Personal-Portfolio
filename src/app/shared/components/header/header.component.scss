@@ -1,3 +1,5 @@
+@import '/src/styles/breakpoints';
+
 /* Variables */
 /* *********************************** */
 // Hamburguer menu
@@ -19,6 +21,14 @@ header {
   align-items: center;
   width: 100%;
   padding: 0.5rem;
+
+  @include media(laptop-l) {
+    padding: 1rem 15rem;
+  }
+
+  @include media(laptop-xl) {
+    padding: 1rem 22rem;
+  }
 }
 
 .logo-container {
@@ -30,6 +40,10 @@ header {
 .menu-container {
   width: 4rem;
   height: 2rem;
+
+  @include media(tablet-s) {
+    width: auto;
+  }
 }
 
 .hamburguer-menu {
@@ -43,6 +57,10 @@ header {
   border: 0;
   cursor: pointer;
   z-index: 100;
+
+  @include media(tablet-s) {
+    display: none;
+  }
 
   &:hover {
     span::before {
@@ -139,6 +157,14 @@ header {
   -ms-transition: $transition-time;
   -o-transition: $transition-time;
 
+  @include media(tablet-s) {
+    position: relative;
+    inset: 0;
+    height: auto;
+    background: transparent;
+    opacity: 1;
+  }
+
   &.active {
     left: 0;
     opacity: 1;
@@ -159,15 +185,35 @@ header {
     -ms-transition: 2s;
     -o-transition: 2s;
 
+    @include media(tablet-s) {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: center;
+      align-items: center;
+      opacity: 1;
+      width: 100%;
+    }
+
     &.active {
       opacity: 1;
     }
   }
 
   &__item {
-    padding: 1rem 0;
+    padding: 1.5rem 0;
+
+    @include media(tablet-s) {
+      padding: 0 1rem;
+    }
+
+    &--disabled {
+      @include media(tablet-s) {
+        display: none;
+      }
+    }
   }
 }
 
-.router-link-active {
-}
+// .router-link-active {
+// }

@@ -17,3 +17,41 @@
     </div>
   </div>
 </article>
+<article class="project">
+  <figure class="project__image">
+    <img [src]="image" alt="">
+  </figure>
+  <div class="project__info">
+    <h4 class="project__title">{{title}}</h4>
+    <p class="project__description">{{description}}</p>
+    <div class="project__techs">
+      <app-project-tech *ngFor="let tech of techs" [technologie]="tech"></app-project-tech>
+    </div>
+    <div class="project__source">
+      <a href="/">Source</a>
+      <a href="/">
+        Watch
+        <fa-icon [icon]="faEye"></fa-icon>
+      </a>
+    </div>
+  </div>
+</article>
+<article class="project">
+  <figure class="project__image">
+    <img [src]="image" alt="">
+  </figure>
+  <div class="project__info">
+    <h4 class="project__title">{{title}}</h4>
+    <p class="project__description">{{description}}</p>
+    <div class="project__techs">
+      <app-project-tech *ngFor="let tech of techs" [technologie]="tech"></app-project-tech>
+    </div>
+    <div class="project__source">
+      <a href="/">Source</a>
+      <a href="/">
+        Watch
+        <fa-icon [icon]="faEye"></fa-icon>
+      </a>
+    </div>
+  </div>
+</article>

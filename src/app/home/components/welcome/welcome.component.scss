@@ -1,3 +1,5 @@
+@import '/src/styles/breakpoints';
+
 .info {
   position: absolute;
   left: 0;
@@ -5,16 +7,45 @@
   right: 0;
   padding: 40% 1rem 0;
   z-index: 1;
+  color: #949494;
+
+  @include media(mobile-m) {
+    padding: 30% 3rem 0;
+  }
+
+  @include media(laptop) {
+    padding: 17% 12rem 0;
+  }
+
+  @include media(laptop-xl) {
+    padding: 17% 24rem 0;
+  }
 
   &__name {
     h1 {
       font-size: 4rem;
+
+      @include media (tablet-s) {
+        font-size: 5rem;
+      }
+
+      @include media (laptop) {
+        font-size: 6rem;
+      }
+
+      @include media (laptop-xl) {
+        font-size: 8rem;
+      }
     }
   }
 
   &__more {
     h6 {
       font-size: 0.8rem;
+
+      @include media (laptop-xl){
+        font-size: 1.3rem;
+      }
     }
   }
 }

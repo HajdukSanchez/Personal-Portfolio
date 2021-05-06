@@ -1,3 +1,5 @@
+@import '/src/styles/breakpoints';
+
 /* Variables */
 /*************************************/
 // Footer
@@ -23,6 +25,14 @@ footer {
   align-items: center;
   background-color: $bg-color;
   color: $color;
+
+  @include media(laptop) {
+    padding: 6rem 20%;
+  }
+
+  @include media(laptop-l) {
+    flex-direction: row;
+  }
 }
 
 .social {
@@ -31,6 +41,15 @@ footer {
   padding: 1.5rem 0;
   justify-content: space-between;
   align-items: center;
+
+  @include media(mobile-m) {
+    padding: 3rem 0;
+    width: 40%;
+  }
+
+  @include media(laptop-l) {
+    justify-content: space-evenly;
+  }
 
   &__item {
     width: 2rem;
@@ -58,6 +77,10 @@ footer {
   display: flex;
   flex-direction: column;
   width: 100%;
+
+  @include media(laptop-l) {
+    width: 50%;
+  }
 
   .info {
     display: flex;
@@ -113,6 +136,10 @@ footer {
 
     &__creator {
       padding-bottom: 3rem;
+
+      @include media(laptop-l) {
+        padding-bottom: 0;
+      }
     }
   }
 }

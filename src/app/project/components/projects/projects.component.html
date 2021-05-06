@@ -4,5 +4,8 @@
   <div class="projects">
     <app-project></app-project>
   </div>
-  <a class="btn btn--more">More projects</a>
+  <button class="btn btn--more" title="More projects comming soon" [disabled]="true">
+    <span>{{'Comming soon' | titlecase}}</span>
+    <fa-icon [icon]="faLock"></fa-icon>
+  </button>
 </div>

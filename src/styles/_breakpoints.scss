@@ -1,0 +1,35 @@
+/*************************************************************\
+  Breakpoints for media quieries
+\*************************************************************/
+
+@mixin media($breakpoint) {
+  @if $breakpoint==mobile-m {
+    @media only screen and (min-width: 375px) {
+      @content;
+    }
+  } @else if $breakpoint==mobile-m {
+    @media only screen and (min-width: 425px) {
+      @content;
+    }
+  } @else if $breakpoint==tablet-s {
+    @media only screen and (min-width: 649px) {
+      @content;
+    }
+  } @else if $breakpoint==tablet {
+    @media only screen and (min-width: 768px) {
+      @content;
+    }
+  } @else if $breakpoint==laptop {
+    @media only screen and (min-width: 1024px) {
+      @content;
+    }
+  } @else if $breakpoint==laptop-l {
+    @media only screen and (min-width: 1440px) {
+      @content;
+    }
+  } @else if $breakpoint==laptop-xl {
+    @media only screen and (min-width: 1620px) {
+      @content;
+    }
+  }
+}

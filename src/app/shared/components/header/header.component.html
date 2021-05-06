@@ -8,10 +8,10 @@
     </button>
     <nav [ngClass]="{ active: openMenu }" class="menu">
       <ul [ngClass]="{ active: openMenu }" class="menu__list">
-        <li class="menu__item"><a [routerLink]="['/']" routerLinkActive="router-link-active" class="menu__link">Proyects</a></li>
-        <li class="menu__item"><a [routerLink]="['/']" routerLinkActive="router-link-active" class="menu__link">Technologies</a></li>
-        <li class="menu__item"><a [routerLink]="['/']" routerLinkActive="router-link-active" class="menu__link">About me</a></li>
-        <li class="menu__item"><a [routerLink]="['/']" routerLinkActive="router-link-active" class="menu__link">Contact</a></li>
+        <li class="menu__item menu__item--disabled"><a [routerLink]="['/']" routerLinkActive="router-link-active">{{'Proyects' | uppercase}}</a></li>
+        <li class="menu__item menu__item--disabled"><a [routerLink]="['/']" routerLinkActive="router-link-active">{{'Technologies' | uppercase}}</a></li>
+        <li class="menu__item"><a [routerLink]="['/']" routerLinkActive="router-link-active">{{'About me' | uppercase}}</a></li>
+        <li class="menu__item menu__item--disabled"><a [routerLink]="['/']" routerLinkActive="router-link-active">{{'Contact' | uppercase}}</a></li>
         <li class="menu__item">
           <button class="btn btn--download">Download CV</button>
         </li>

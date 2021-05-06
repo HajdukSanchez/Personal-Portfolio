@@ -1,3 +1,5 @@
+@import '/src/styles/breakpoints';
+
 /* Variables */
 /*************************************/
 // Technologie
@@ -18,6 +20,11 @@ $transition: 0.5s;
   flex-direction: column;
   width: 100%;
   padding: 2rem 0 0;
+
+  @include media(laptop) {
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
 
   &__container {
     display: flex;
@@ -42,6 +49,11 @@ $transition: 0.5s;
   -moz-transition: $transition;
   -ms-transition: $transition;
   -o-transition: $transition;
+
+  @include media(laptop) {
+    width: 90%;
+    margin-top: 2rem;
+  }
 
   &:hover {
     .technologie__name {

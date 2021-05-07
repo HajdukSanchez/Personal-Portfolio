@@ -111,6 +111,7 @@ $border-r2: 0.2rem;
   }
 
   &__info {
+    position: relative;
     padding: 1rem;
 
     @include media(laptop) {
@@ -118,7 +119,6 @@ $border-r2: 0.2rem;
     }
 
     @include media(laptop-xl) {
-      position: relative;
       display: flex;
       flex-direction: column;
       padding: 5rem;
@@ -138,7 +138,7 @@ $border-r2: 0.2rem;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    margin-bottom: 1rem;
+    margin-bottom: 4rem;
   }
 
   &__source {

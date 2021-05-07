@@ -8,12 +8,12 @@
     </button>
     <nav [ngClass]="{ active: openMenu }" class="menu">
       <ul [ngClass]="{ active: openMenu }" class="menu__list">
-        <li class="menu__item menu__item--disabled"><a [routerLink]="['/']" routerLinkActive="router-link-active">{{'Proyects' | uppercase}}</a></li>
-        <li class="menu__item menu__item--disabled"><a [routerLink]="['/']" routerLinkActive="router-link-active">{{'Technologies' | uppercase}}</a></li>
-        <li class="menu__item"><a [routerLink]="['/']" routerLinkActive="router-link-active">{{'About me' | uppercase}}</a></li>
-        <li class="menu__item menu__item--disabled"><a [routerLink]="['/']" routerLinkActive="router-link-active">{{'Contact' | uppercase}}</a></li>
+        <li class="menu__item menu__item--disabled"><a [routerLink]="['/']" fragment="proyect" (click)="toogleMenu()">{{'Proyects' | uppercase}}</a></li>
+        <li class="menu__item menu__item--disabled"><a [routerLink]="['/']" fragment="technologie" (click)="toogleMenu()">{{'Technologies' | uppercase}}</a></li>
+        <li class="menu__item"><a [routerLink]="['/']" fragment="about" (click)="toogleMenu()">{{'About me' | uppercase}}</a></li>
+        <li class="menu__item menu__item--disabled"><a [routerLink]="['/']" fragment="contact" (click)="toogleMenu()">{{'Contact' | uppercase}}</a></li>
         <li class="menu__item">
-          <button class="btn btn--download">Download CV</button>
+          <a class="btn btn--download" href="https://firebasestorage.googleapis.com/v0/b/jhs-portfolio.appspot.com/o/CV-Jozek-Hajduk.pdf?alt=media&token=80f778f9-98bd-4133-bc63-05dc0ebc57a1" target="_blank" download>Download CV</a>
         </li>
       </ul>
     </nav>

@@ -10,6 +10,10 @@
   font-family: 'Montserrat', sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   &::-webkit-scrollbar {
     width: 10px;
@@ -98,7 +102,8 @@ img {
 
   &--download {
     padding: 0.5rem;
-    background-color: #edbb00;
+    border: 0.01rem solid #edbb00;
+    color: #edbb00;
     box-shadow: 3px 3px 0px 2px rgb(0 0 0 / 19%);
     transition: 0.5s;
     -webkit-transition: 0.5s;
@@ -107,8 +112,8 @@ img {
     -o-transition: 0.5s;
 
     &:hover {
-      color: darken($color: #edbb00, $amount: 20%);
-      background-color: lighten($color: #edbb00, $amount: 10%);
+      color: #777777;
+      background-color: #edbb00;
     }
 
     &:active {

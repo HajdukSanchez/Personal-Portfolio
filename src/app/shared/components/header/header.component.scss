@@ -207,6 +207,10 @@ header {
       padding: 0 1rem;
     }
 
+    @include media(laptop) {
+      font-size: 0.8rem;
+    }
+
     &--disabled {
       @include media(tablet-s) {
         display: none;

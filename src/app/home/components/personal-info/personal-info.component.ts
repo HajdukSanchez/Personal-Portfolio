@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { RealTimeDbService } from 'src/app/core/services/firebase/database/real-time-db.service';
 
 @Component({
   selector: 'app-personal-info',
@@ -7,15 +8,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PersonalInfoComponent implements OnInit {
 
-  title: string = 'About me';
-  description: string = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam corporis temporibus dignissimos. Necessitatibus, eligendi dignissimos fugit pariatur deleniti blanditiis sed?';
-  profileImage: string = 'https://st3.depositphotos.com/15648834/17930/v/600/depositphotos_179308454-stock-illustration-unknown-person-silhouette-glasses-profile.jpg';
+  title: string = '';
+  description: string = '';
+  profileImage: string = '';
+
+  // Flags
   colombiaFlag: string = './../../../../assets/images/colombia.svg';
   polandFlag: string = './../../../../assets/images/poland.svg';
 
-  constructor() { }
+  constructor(
+    private dataBaseService: RealTimeDbService
+  ) { }
 
   ngOnInit(): void {
+    this.dataBaseService.getAboutData()
+      .subscribe((data: any) => {
+        this.description = data[0];
+        this.profileImage = data[1];
+        this.title = data[2];
+      });
   }
 
 }

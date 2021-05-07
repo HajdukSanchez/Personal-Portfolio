@@ -1,13 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 
-import { FooterService } from './footer.service';
+import { RealTimeDbService } from './real-time-db.service';
 
-describe('FooterService', () => {
-  let service: FooterService;
+describe('RealTimeDbService', () => {
+  let service: RealTimeDbService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(FooterService);
+    service = TestBed.inject(RealTimeDbService);
   });
 
   it('should be created', () => {

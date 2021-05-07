@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { faGithub, faLinkedinIn, faTwitter } from '@fortawesome/free-brands-svg-icons';
 import { faMapPin, faPaperPlane } from '@fortawesome/free-solid-svg-icons';
-import { RealTimeFireService } from 'src/app/core/services/firebase/real-time-fire/real-time-fire.service';
+import { FooterService } from 'src/app/core/services/firebase/footer/footer.service';
 @Component({
   selector: 'app-footer',
   templateUrl: './footer.component.html',
@@ -16,12 +16,13 @@ export class FooterComponent implements OnInit {
   faMail = faPaperPlane;
   faLocation = faMapPin;
 
-  mail: string = 'hajduksanchez.dev@gmail.com';
-  city: string = 'Bogota D.C, Colombia';
-  creatorInfo: string = '© Hajduk Sánchez 🚀 2021 💻';
+  mail: string = '';
+  location: string = '';
+  message: string = '';
+  socials: string[] = [];
 
   constructor(
-    private fireService: RealTimeFireService
+    private footerService: FooterService
   ) { }
 
   ngOnInit(): void {
@@ -29,11 +30,13 @@ export class FooterComponent implements OnInit {
   }
 
   private getData(): void {
-    this.fireService.getAllData().snapshotChanges()
-      .subscribe((data) => {
-        console.log(data);
-
-      });
+    this.footerService.getData()
+      .subscribe((params: any) => {
+        this.location = params[0];
+        this.mail = params[1];
+        this.message = params[2];
+        this.socials = params[3];
+      })
   }
 
 }

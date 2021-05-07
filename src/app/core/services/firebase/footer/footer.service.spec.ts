@@ -1,13 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 
-import { RealTimeFireService } from './real-time-fire.service';
+import { FooterService } from './footer.service';
 
-describe('RealTimeFireService', () => {
-  let service: RealTimeFireService;
+describe('FooterService', () => {
+  let service: FooterService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(RealTimeFireService);
+    service = TestBed.inject(FooterService);
   });
 
   it('should be created', () => {

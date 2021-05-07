@@ -8,7 +8,7 @@ import { ProjectTech } from 'src/app/interfaces/project-tech';
 })
 export class ProjectTechComponent implements OnInit {
 
-  @Input() technologie: ProjectTech | any;
+  @Input() technologie: string = '';
 
   constructor() { }
 

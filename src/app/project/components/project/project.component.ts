@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
+import { ProjectsService } from 'src/app/core/services/firebase/projects/projects.service';
+import { Project } from 'src/app/interfaces/project';
 import { ProjectTech } from 'src/app/interfaces/project-tech';
 
 @Component({
@@ -12,25 +14,21 @@ export class ProjectComponent implements OnInit {
   // Fontawesome icons
   faEye = faExternalLinkAlt;
 
-  title: string = 'Project 1';
-  description: string = 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quo a est possimus accusamus aperiam suscipit obcaecati ipsa nihil autem mollitia.';
-  image: string = 'https://miro.medium.com/max/1920/1*ee9Ji2ToUxeYfj3YUQ1xsA.jpeg';
-  techs: ProjectTech[] = [
-    {name: 'html', class: 'html'},
-    {name: 'css', class: 'css'},
-    {name: 'sass', class: 'sass'},
-    {name: 'js', class: 'js'},
-    {name: 'java', class: 'java'},
-    {name: 'bootstrap', class: 'bootstrap'},
-    {name: 'stylus', class: 'stylus'},
-    {name: 'less', class: 'less'},
-    {name: 'python', class: 'python'},
-    {name: 'pug', class: 'pug'},
-  ]
+  projects: Project[] = [];
 
-  constructor() { }
+  constructor(
+    private projectService: ProjectsService
+  ) { }
 
   ngOnInit(): void {
+    this.getData();
+  }
+
+  private getData() {
+    this.projectService.getTopProjects()
+      .subscribe((data) => {
+        this.projects = data;
+      });
   }
 
 }

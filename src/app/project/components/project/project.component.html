@@ -1,54 +1,16 @@
-<article class="project">
+<article class="project" *ngFor="let project of projects">
   <figure class="project__image">
-    <img [src]="image" alt="">
+    <img [src]="project.image" [alt]="project.title">
   </figure>
   <div class="project__info">
-    <h4 class="project__title">{{title}}</h4>
-    <p class="project__description">{{description}}</p>
+    <h4 class="project__title">{{project.title}}</h4>
+    <p class="project__description">{{project.description}}</p>
     <div class="project__techs">
-      <app-project-tech *ngFor="let tech of techs" [technologie]="tech"></app-project-tech>
+      <app-project-tech *ngFor="let tech of project.technologies" [technologie]="tech"></app-project-tech>
     </div>
     <div class="project__source">
-      <a href="/">Source</a>
-      <a href="/">
-        Watch
-        <fa-icon [icon]="faEye"></fa-icon>
-      </a>
-    </div>
-  </div>
-</article>
-<article class="project">
-  <figure class="project__image">
-    <img [src]="image" alt="">
-  </figure>
-  <div class="project__info">
-    <h4 class="project__title">{{title}}</h4>
-    <p class="project__description">{{description}}</p>
-    <div class="project__techs">
-      <app-project-tech *ngFor="let tech of techs" [technologie]="tech"></app-project-tech>
-    </div>
-    <div class="project__source">
-      <a href="/">Source</a>
-      <a href="/">
-        Watch
-        <fa-icon [icon]="faEye"></fa-icon>
-      </a>
-    </div>
-  </div>
-</article>
-<article class="project">
-  <figure class="project__image">
-    <img [src]="image" alt="">
-  </figure>
-  <div class="project__info">
-    <h4 class="project__title">{{title}}</h4>
-    <p class="project__description">{{description}}</p>
-    <div class="project__techs">
-      <app-project-tech *ngFor="let tech of techs" [technologie]="tech"></app-project-tech>
-    </div>
-    <div class="project__source">
-      <a href="/">Source</a>
-      <a href="/">
+      <a href="{{project.source}}">Source</a>
+      <a href="{{project.view}}">
         Watch
         <fa-icon [icon]="faEye"></fa-icon>
       </a>

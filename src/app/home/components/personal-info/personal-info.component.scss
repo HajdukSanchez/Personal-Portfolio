@@ -19,6 +19,7 @@ $border-r: 50%;
   img {
     height: 100%;
     object-fit: cover;
+    filter: grayscale(0.6);
     border-radius: $border-r;
     -webkit-border-radius: $border-r;
     -moz-border-radius: $border-r;

@@ -46,4 +46,4 @@ testem.log
 Thumbs.db
 
 # Technologies logos
-src/assets/images/*.svg
+#src/assets/images/*.svg

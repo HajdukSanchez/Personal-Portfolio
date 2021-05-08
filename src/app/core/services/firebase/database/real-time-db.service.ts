@@ -10,6 +10,10 @@ export class RealTimeDbService {
     private database: AngularFireDatabase
   ) { }
 
+  getCV() {
+    return this.database.list('cv').valueChanges();
+  }
+
   getBannerData() {
     return this.database.list('banner').valueChanges();
   }

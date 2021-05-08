@@ -45,10 +45,6 @@ $border-r: 50%;
     width: 7%;
   }
 
-  @include media(laptop-xl) {
-    width: 15%;
-  }
-
   .flag:first-child {
     margin-right: 0.5rem;
   }

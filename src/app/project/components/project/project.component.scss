@@ -49,11 +49,13 @@ $border-r2: 0.2rem;
     margin-bottom: 6rem;
   }
 
+  @include media(laptop-xl) {
+    width: 90%;
+  }
+
   &__image {
     width: 100%;
     height: 18rem;
-    max-height: 30rem;
-    min-height: 11rem;
     border-top-left-radius: $border-r;
     border-top-right-radius: $border-r;
     overflow: hidden;
@@ -121,7 +123,7 @@ $border-r2: 0.2rem;
     @include media(laptop-xl) {
       display: flex;
       flex-direction: column;
-      padding: 5rem;
+      padding: 3rem;
     }
   }
 

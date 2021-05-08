@@ -9,8 +9,8 @@
       <app-project-tech *ngFor="let tech of project.technologies" [technologie]="tech"></app-project-tech>
     </div>
     <div class="project__source">
-      <a href="{{project.source}}">Source</a>
-      <a href="{{project.view}}">
+      <a href="{{project.source}}" target="_blank">Source</a>
+      <a href="{{project.view}}" target="_blank">
         Watch
         <fa-icon [icon]="faEye"></fa-icon>
       </a>

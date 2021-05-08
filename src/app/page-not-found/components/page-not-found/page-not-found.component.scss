@@ -1,0 +1,234 @@
+// Variables
+$color-primary: #18191a;
+$transition-time: .5s;
+$colors-aux: ('wine': #A50044,
+  'blue': #004D98,
+  'yellow': #EDBB00,
+  'red': #DB0030,
+  'gray': #EBEBEB);
+
+// mixin
+// Circles
+@mixin circle ($size: $default-circle-size) {
+  width: $size;
+  height: $size;
+  border-radius: 50%;
+}
+
+// Circles loader
+@mixin circle-loader ($color: 'wine', $delay: 0s) {
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: .3rem;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    transform: scale(1);
+    animation: shadow 1s linear infinite alternate $delay;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: -3rem;
+    display: block;
+    animation: jumping 1s linear infinite alternate $delay;
+    background-color: map-get($map: $colors-aux, $key: $color);
+    @include circle(1.3rem);
+  }
+}
+
+@mixin transition ($time: $transition-time) {
+  transition: all $time ease-in;
+}
+
+
+:host {
+  position: relative;
+  display: flex;
+}
+
+.message {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 10000;
+
+  h1 {
+    font-size: 4rem;
+  }
+
+  h3 {
+    font-size: 2rem;
+  }
+}
+
+.loader {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  background: lighten($color-primary, 15%);
+  @include transition;
+  z-index: 100;
+
+  &__container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    padding: 1rem;
+  }
+
+  &__item {
+    position: relative;
+    margin-right: 1rem;
+    @include transition;
+    @include circle(1.3rem);
+  }
+
+  &--1 {
+    @include circle-loader('wine', 0s);
+  }
+
+  &--2 {
+    @include circle-loader('blue', .2s);
+  }
+
+  &--3 {
+    @include circle-loader('yellow', .4s);
+  }
+
+  &--4 {
+    @include circle-loader('red', .6s);
+  }
+
+  &--5 {
+    margin-right: 0;
+    @include circle-loader('gray', .8s);
+  }
+}
+
+
+// Animation
+@keyframes jumping {
+  0% {
+    top: -3rem;
+    transform: rotateX(0deg);
+  }
+
+  10% {
+    top: -2.4rem;
+    transform: rotateX(0deg);
+  }
+
+  20% {
+    top: -1.8rem;
+    transform: rotateX(0deg);
+  }
+
+  30% {
+    top: -1.2rem;
+    transform: rotateX(0deg);
+  }
+
+  40% {
+    top: -.6rem;
+    transform: rotateX(0deg);
+  }
+
+  50% {
+    top: 0rem;
+    transform: rotateX(60deg);
+  }
+
+  55% {
+    transform: rotateX(30deg);
+  }
+
+  60% {
+    top: -.6rem;
+    transform: rotateX(0deg);
+  }
+
+  70% {
+    top: -1.2rem;
+    transform: rotateX(0deg);
+  }
+
+  80% {
+    top: -1.8rem;
+    transform: rotateX(0deg);
+  }
+
+  90% {
+    top: -2.4rem;
+    transform: rotateX(0deg);
+  }
+
+  100% {
+    top: -2.8rem;
+    transform: rotateX(0deg);
+  }
+}
+
+// For shadow circles
+@keyframes shadow {
+  0% {
+    transform: scale(.4);
+  }
+
+  10% {
+    transform: scale(.5);
+  }
+
+  20% {
+    transform: scale(.6);
+  }
+
+  30% {
+    transform: scale(.8);
+  }
+
+  40% {
+    transform: scale(.9);
+  }
+
+  50% {
+    transform: scale(1);
+  }
+
+  60% {
+    transform: scale(.9);
+  }
+
+  70% {
+    transform: scale(.8);
+  }
+
+  80% {
+    transform: scale(.6);
+  }
+
+  90% {
+    transform: scale(.5);
+  }
+
+  100% {
+    transform: scale(.4);
+  }
+}

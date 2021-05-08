@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { faGithub, faLinkedinIn, faTwitter } from '@fortawesome/free-brands-svg-icons';
 import { faMapPin, faPaperPlane } from '@fortawesome/free-solid-svg-icons';
 import { RealTimeDbService } from 'src/app/core/services/firebase/database/real-time-db.service';
+import { Socials } from 'src/app/interfaces/socials';
 @Component({
   selector: 'app-footer',
   templateUrl: './footer.component.html',
@@ -19,7 +20,11 @@ export class FooterComponent implements OnInit {
   mail: string = '';
   location: string = '';
   message: string = '';
-  socials: string[] = [];
+  socials: Socials = {
+    github: '',
+    linkedin: '',
+    twitter: '',
+  };
 
   constructor(
     private dataBaseService: RealTimeDbService
